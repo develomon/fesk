@@ -1,0 +1,9 @@
+# Ignore directories
+node_modules/
+.idea/
+.sass-cache
+
+# Ignore files
+.DS_Store
+*.css.map
+yarn-error.log

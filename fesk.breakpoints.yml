@@ -1,0 +1,24 @@
+fesk.sm-screen:
+  label: s-screen-max
+  mediaQuery: '(max-width: 639px)'
+  weight: 1
+  multipliers:
+    - 1x
+fesk.md-screen:
+  label: m-screen-min-max
+  mediaQuery: '(min-width: 640px) and (max-width: 1019px)'
+  weight: 1
+  multipliers:
+    - 1x
+fesk.lg-screen:
+  label: l-screen-min
+  mediaQuery: '(min-width: 1020px)'
+  weight: 1
+  multipliers:
+    - 1x
+fesk.max-screen:
+  label: max-screen-min
+  mediaQuery: '(min-width: 1200px)'
+  weight: 1
+  multipliers:
+    - 1x

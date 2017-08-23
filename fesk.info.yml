@@ -1,0 +1,53 @@
+#
+name: FESK
+type: theme
+base theme: stable
+description: 'Lorem ipsum.'
+package: Core
+version: 1.0.0-dev
+core: 8.x
+
+#
+# Libraries.
+#
+libraries:
+  - fesk/global
+
+# Libraries - override.
+#libraries-override: # [EXAMPLE]
+#  node/drupal.node:
+#    css:
+#      layout:
+#        css/node.module.css: css/node/node.module.css
+
+# Libraries - extend.
+#libraries-extend: # [EXAMPLE]
+#  core/drupal.vertical-tabs:
+#    - fesk/vertical-tabs
+
+#ckeditor_stylesheets: # [EXAMPLE]
+#  - assets/css/ckeditor.css
+
+#
+# Regions.
+#
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  secondary_menu: 'Secondary menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: 'Highlighted'
+  featured_top: 'Featured top'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  featured_bottom_first: 'Featured bottom first'
+  featured_bottom_second: 'Featured bottom second'
+  featured_bottom_third: 'Featured bottom third'
+  footer_first: 'Footer first'
+  footer_second: 'Footer second'
+  footer_third: 'Footer third'
+  footer_fourth: 'Footer fourth'
+  footer_fifth: 'Footer fifth'
