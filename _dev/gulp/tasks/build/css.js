@@ -10,10 +10,11 @@ module.exports = function (gulp, plugins, settings, handlers) {
     }
 
     run(
-      'css:del',
-      'sass:global',
-      'css:global',
-      'notifications:build',
+      'css:del',             // Remove all CSS files.
+      'svg:min',             // Minify SVG before use it in CSS.
+      'sass:global',         // Compile global Sass files with Sass.
+      'css:global',          // Compile global CSS files with PostCSS.
+      'notifications:build', // Send notification to the screen that task is finished.
       cb
     );
   });
@@ -25,12 +26,14 @@ module.exports = function (gulp, plugins, settings, handlers) {
     }
 
     run(
-      'css:del',
-      'sass:global',
-      'css:global',
-      'css:minify',
-      'css:gzip',
-      'notifications:build',
+      'css:del',             // Remove all CSS files.
+      'svg:min',             // Minify SVG before use it in CSS.
+      'sass:global',         // Compile global Sass files with Sass.
+      'css:global',          // Compile global CSS files with PostCSS.
+      'css:minify',          // Minify CSS.
+      'css:gzip',            // Make .css.gz files (browser search for them automatically).
+      'build:del:tmp',       // Remove .tmp folder.
+      'notifications:build', // Send notification to the screen that task is finished.
       cb
     );
   });
