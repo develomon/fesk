@@ -41,18 +41,23 @@ function getTask(group, name) {
  * Tasks.
  */
 
-// (Ordered: A-Z[GROUP|NAME]) ||  COMMANDS
+// (Ordered: A-Z[GROUP|NAME])      ||   COMMANDS
 // Build
-getTask('build', 'css');     // $ gulp build:css:development; $ gulp build:css:production
+getTask('build', 'css');           // $ gulp build:css:development; $ gulp build:css:production
+getTask('build', 'del');           // $ gulp build:del:tmp
 // CSS
-getTask('css', 'del');       // $ gulp css:del
-getTask('css', 'global');    // $ gulp css:global
-getTask('css', 'gzip');      // $ gulp css:gzip
-getTask('css', 'minify');    // $ gulp css:minify
+getTask('css', 'del');             // $ gulp css:del
+getTask('css', 'global');          // $ gulp css:global
+getTask('css', 'gzip');            // $ gulp css:gzip
+getTask('css', 'minify');          // $ gulp css:minify
 // Notifications
-getTask('notifications', 'build');
+getTask('notifications', 'build'); // $ gulp notifications:build
 // SASS
-getTask('sass', 'global');   // $ gulp sass:global
+getTask('sass', 'global');         // $ gulp sass:global
+// SVG
+getTask('svg', 'del');             // $ gulp svg:del
+getTask('svg', 'min');             // $ gulp svg:min
+getTask('svg', 'sprite');          // $ gulp svg:sprite
 
 /**
  * Watch tasks.
