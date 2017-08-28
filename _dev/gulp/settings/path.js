@@ -9,6 +9,14 @@ var rootPath = {
 };
 
 module.exports = {
+  tmp: {
+    css: path.resolve(rootPath.tmp, './assets/css'),
+    sass: path.resolve(rootPath.tmp, './assets/sass'),
+    js: path.resolve(rootPath.tmp, './assets/js'),
+    images: path.resolve(rootPath.tmp, './assets/images'),
+    svg: path.resolve(rootPath.tmp, './assets/svg'),
+    fonts: path.resolve(rootPath.tmp, './assets/fonts')
+  },
   dev: {
     css: path.resolve(rootPath.dev, './assets/css'),
     sass: path.resolve(rootPath.dev, './assets/sass'),
