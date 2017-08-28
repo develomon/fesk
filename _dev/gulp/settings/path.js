@@ -10,6 +10,8 @@ var rootPath = {
 
 module.exports = {
   tmp: {
+    _self: path.resolve(rootPath.tmp, './'),
+    assets: path.resolve(rootPath.tmp, './assets'),
     css: path.resolve(rootPath.tmp, './assets/css'),
     sass: path.resolve(rootPath.tmp, './assets/sass'),
     js: path.resolve(rootPath.tmp, './assets/js'),
@@ -18,6 +20,8 @@ module.exports = {
     fonts: path.resolve(rootPath.tmp, './assets/fonts')
   },
   dev: {
+    _self: path.resolve(rootPath.dev, './'),
+    assets: path.resolve(rootPath.dev, './assets'),
     css: path.resolve(rootPath.dev, './assets/css'),
     sass: path.resolve(rootPath.dev, './assets/sass'),
     js: path.resolve(rootPath.dev, './assets/js'),
@@ -26,6 +30,8 @@ module.exports = {
     fonts: path.resolve(rootPath.dev, './assets/fonts')
   },
   theme: {
+    _self: path.resolve(rootPath.theme, './'),
+    assets: path.resolve(rootPath.theme, './assets'),
     css: path.resolve(rootPath.theme, './assets/stylesheets'),
     fonts: path.resolve(rootPath.theme, './assets/fonts'),
     images: path.resolve(rootPath.theme, './assets/images'),
