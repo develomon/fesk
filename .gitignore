@@ -2,6 +2,7 @@
 node_modules/
 .idea/
 .sass-cache
+.tmp/
 
 # Ignore files
 .DS_Store
