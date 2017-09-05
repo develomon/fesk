@@ -42,10 +42,14 @@ module.exports = {
       pathSettings.tmp.fonts + '/**/*.woff',
       pathSettings.tmp.fonts + '/**/*.woff2'
     ]
-  }
+  },
 
-  // pattern_lab: [
-  //   options.rootPath.pattern_lab + '**/*.json',
-  //   options.rootPath.pattern_lab + '**/*.twig'
-  // ]
+  pattern_lab: {
+    css: [pathSettings.pattern_lab.css + '/**/*.css'],
+    sass: [pathSettings.pattern_lab.sass + '/**/*.scss'],
+    patterns: {
+      css: [pathSettings.pattern_lab.patterns + '/**/*.css'],
+      sass: [pathSettings.pattern_lab.patterns + '/**/*.scss']
+    }
+  }
 };

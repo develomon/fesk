@@ -5,7 +5,8 @@ var path = require('path');
 var rootPath = {
   dev: path.resolve(__dirname, '../../'),
   tmp: path.resolve(__dirname, '../../.tmp/'),
-  theme: path.resolve(__dirname, '../../../')
+  theme: path.resolve(__dirname, '../../../'),
+  pattern_lab: path.resolve(__dirname, '../../pattern-lab/')
 };
 
 module.exports = {
@@ -36,6 +37,13 @@ module.exports = {
     fonts: path.resolve(rootPath.theme, './assets/fonts'),
     images: path.resolve(rootPath.theme, './assets/images'),
     js: path.resolve(rootPath.theme, './assets/scripts'),
-    svg: path.resolve(rootPath.theme, './assets/images/svg')
+    svg: path.resolve(rootPath.theme, './assets/images/svg'),
+    templates: path.resolve(rootPath.theme, './templates')
+  },
+  pattern_lab: {
+    _self: path.resolve(rootPath.pattern_lab, './'),
+    sass: path.resolve(rootPath.pattern_lab, './source/sass'),
+    css: path.resolve(rootPath.pattern_lab, './source/css'),
+    patterns: path.resolve(rootPath.pattern_lab, './source/_patterns')
   }
 };
