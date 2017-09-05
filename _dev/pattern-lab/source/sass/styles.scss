@@ -1,0 +1,14 @@
+// Variables.
+$drupal_core: "../../../../../../../core";
+$drupal_core_themes: "#{$drupal_core}/themes";
+$current_theme_root: "../../../..";
+$current_theme_assets: "#{$current_theme_root}/assets";
+$current_theme_css: "#{$current_theme_root}/assets/stylesheets";
+$current_theme_templates: "#{$current_theme_root}/templates";
+
+/* Drupal Core */
+@import url("#{$drupal_core_themes}/bartik/css/base/elements.css");
+
+/* Theme */
+@import url("#{$current_theme_css}/hey.css");
+@import url("#{$current_theme_templates}/00-base/tables/00-table.css");
