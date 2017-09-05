@@ -14,7 +14,7 @@ module.exports = function (gulp, plugins, settings, handlers) {
       'svg:min',             // Minify SVG before use it in CSS.
       'sass:global',         // Compile global Sass files with Sass.
       'css:global',          // Compile global CSS files with PostCSS.
-      'notifications:build', // Send notification to the screen that task is finished.
+      // 'notifications:build', // Send notification to the screen that task is finished.
       cb
     );
   });

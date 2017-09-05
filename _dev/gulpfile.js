@@ -47,12 +47,18 @@ getTask('build', 'css');           // $ gulp build:css:development; $ gulp build
 getTask('build', 'del');           // $ gulp build:del:tmp
 // CSS
 getTask('css', 'del');             // $ gulp css:del
+getTask('css', 'components');      // $ gulp css:components
 getTask('css', 'global');          // $ gulp css:global
 getTask('css', 'gzip');            // $ gulp css:gzip
 getTask('css', 'minify');          // $ gulp css:minify
+// Images
+getTask('img', 'sprite');          // $ gulp img:sprite
 // Notifications
 getTask('notifications', 'build'); // $ gulp notifications:build
+// Pattern Lab
+getTask('pattern-lab', 'sass');    // $ gulp pattern-lab:sass
 // SASS
+getTask('sass', 'components');     // $ gulp sass:components
 getTask('sass', 'global');         // $ gulp sass:global
 // SVG
 getTask('svg', 'del');             // $ gulp svg:del
