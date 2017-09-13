@@ -1,5 +1,8 @@
 'use strict';
 
+var importOnce = require('node-sass-import-once');
+var path = require('path');
+
 module.exports = function(gulp, plugins, settings, handlers, cb) {
   gulp.task('sass:components', function (cb) {
     if (settings.debug) {
@@ -8,7 +11,13 @@ module.exports = function(gulp, plugins, settings, handlers, cb) {
 
     const conf = {
       sass: {
-        importer: plugins.sassImportOnce,
+        importer: importOnce,
+        importOnce: {
+          // index: true
+        },
+        includePaths: [
+          settings.path.dev.sass
+        ],
         outputStyle: 'expanded'
       },
 
