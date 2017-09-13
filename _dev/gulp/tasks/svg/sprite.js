@@ -10,7 +10,7 @@ module.exports = function (gulp, plugins, settings, handlers) {
       mode: {
         symbol: { // symbol mode to build the SVG
           render: {
-            css: false, // CSS output option for icon sizing
+            css: true, // CSS output option for icon sizing
             scss: true // SCSS output option for icon sizing
           },
           dest: 'sprite', // destination folder
@@ -48,6 +48,6 @@ module.exports = function (gulp, plugins, settings, handlers) {
       .pipe(plugins.svgSprite(config)).on('error', function(error){
         console.log('Error: ', error);
       })
-      .pipe(gulp.dest(settings.path.tmp.svg));
+      .pipe(gulp.dest(settings.path.theme.svg));
   });
 };
