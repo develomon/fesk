@@ -5,13 +5,6 @@ var settings = {
 };
 
 module.exports = {
-  // scss: [
-  //   settings.path.dev.sass + '/**/*.scss'
-  // ],
-  // css: [settings.path.dev.css + '/**/*.css'],
-  // js: [settings.path.dev.js + '/**/*.js'],
-  // svg: [settings.path.dev.svg + '/**/*.svg'],
-
   dev: {
     scss: [settings.path.dev.sass + '/**/*.scss'],
     css: [settings.path.dev.css + '/**/*.css'],
