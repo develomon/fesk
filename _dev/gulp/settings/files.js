@@ -49,7 +49,8 @@ module.exports = {
     sass: [pathSettings.pattern_lab.sass + '/**/*.scss'],
     patterns: {
       css: [pathSettings.pattern_lab.patterns + '/**/*.css'],
-      sass: [pathSettings.pattern_lab.patterns + '/**/*.scss']
+      sass: [pathSettings.pattern_lab.patterns + '/**/*.scss'],
+      js: [pathSettings.pattern_lab.patterns + '/**/*.js']
     }
   }
 };
