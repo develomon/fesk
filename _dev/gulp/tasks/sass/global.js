@@ -22,7 +22,7 @@ module.exports = function(gulp, plugins, settings, handlers, cb) {
       }
     };
 
-    return gulp.src(settings.files.scss)
+    return gulp.src(settings.files.dev.scss)
       .pipe(plugins.plumber({ errorHandler: handlers.error }))
       .pipe(plugins.sourcemaps.init({ loadMaps: true }))
       .pipe(plugins.sassGlob(conf.sassGlob))

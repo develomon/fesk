@@ -39,14 +39,20 @@
   },
   "scripts": {
     "build": "npm-run-all build:svg build:css pattern-lab:css pattern-lab:twig build:notify",
-    "build:production": "gulp build:css:production",
     "build:css": "gulp build:css:development",
+    "build:js": "gulp build:js:development",
     "build:svg": "gulp svg:sprite",
     "build:notify": "gulp notifications:build",
     "build:pattern-lab": "npm-run-all pattern-lab:css pattern-lab:twig",
+    "build:production": "npm-run-all build:production:css build:production:js cleanup:tmp build:notify",
+    "build:production:css": "gulp build:css:production",
+    "build:production:js": "gulp build:js:production",
     "pattern-lab:css": "gulp pattern-lab:sass",
     "pattern-lab:twig": "php pattern-lab/core/console --generate",
     "server:pattern-lab": "php pattern-lab/core/console --server",
-    "cleanup": "gulp build:del"
+    "cleanup": "gulp build:del",
+    "cleanup:assets": "gulp build:del",
+    "cleanup:tmp": "gulp build:del",
+    "watch": "gulp watch"
   }
 }

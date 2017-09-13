@@ -45,6 +45,7 @@ function getTask(group, name) {
 // Build
 getTask('build', 'css');           // $ gulp build:css:development; $ gulp build:css:production
 getTask('build', 'del');           // $ gulp build:del; $ gulp build:del:tmp; $ gulp build:del:assets
+getTask('build', 'js');            // $ gulp build:js:development; $ gulp build:js:production
 // CSS
 getTask('css', 'components');      // $ gulp css:components
 getTask('css', 'del');             // $ gulp css:del
@@ -75,7 +76,19 @@ getTask('svg', 'sprite');          // $ gulp svg:sprite
  */
 
 gulp.task('watch', function (cb) {
-  gulp.watch([settings.files.scss, settings.files.css], ['build:css:development']);
+  // Watch SASS/CSS files (global and components).
+  gulp.watch([
+    settings.files.dev.scss,
+    settings.files.dev.css,
+    settings.files.pattern_lab.patterns.sass,
+    settings.files.pattern_lab.patterns.css
+  ], ['build:css:development']);
+
+  // Watch JS files (global and components).
+  gulp.watch([
+    settings.files.dev.js,
+    settings.files.pattern_lab.patterns.js
+  ], ['build:js:development']);
 });
 
 /**

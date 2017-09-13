@@ -14,7 +14,7 @@ module.exports = function (gulp, plugins, settings, handlers) {
       console.log('js:gzip:global task...');
     }
 
-    return gulp.src(settings.files.js)
+    return gulp.src(settings.files.dev.js)
       .pipe(plugins.plumber({errorHandler: handlers.error}))
       .pipe(plugins.gzip())
       .pipe(gulp.dest(settings.path.theme.js));

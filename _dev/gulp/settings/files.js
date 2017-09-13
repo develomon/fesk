@@ -1,56 +1,64 @@
 'use strict';
 
-var pathSettings = require('./path.js');
+var settings = {
+  path: require('./path.js')
+};
 
 module.exports = {
-  scss: [
-    pathSettings.dev.sass + '/**/*.scss'
-    // '!' + pathSettings.sass + '/**/_*.scss'
-  ],
-  css: [pathSettings.dev.css + '/**/*.css'],
-  js: [pathSettings.dev.js + '/**/*.js'],
-  svg: [pathSettings.dev.svg + '/**/*.svg'],
+  // scss: [
+  //   settings.path.dev.sass + '/**/*.scss'
+  // ],
+  // css: [settings.path.dev.css + '/**/*.css'],
+  // js: [settings.path.dev.js + '/**/*.js'],
+  // svg: [settings.path.dev.svg + '/**/*.svg'],
+
+  dev: {
+    scss: [settings.path.dev.sass + '/**/*.scss'],
+    css: [settings.path.dev.css + '/**/*.css'],
+    js: [settings.path.dev.js + '/**/*.js'],
+    svg: [settings.path.dev.svg + '/**/*.svg']
+  },
 
   public: {
-    css: [pathSettings.theme.css + '/**/*.css'],
+    css: [settings.path.theme.css + '/**/*.css'],
     fonts: [
-      pathSettings.theme.fonts + '/**/*.eot',
-      pathSettings.theme.fonts + '/**/*.ttf',
-      pathSettings.theme.fonts + '/**/*.woff',
-      pathSettings.theme.fonts + '/**/*.woff2'
+      settings.path.theme.fonts + '/**/*.eot',
+      settings.path.theme.fonts + '/**/*.ttf',
+      settings.path.theme.fonts + '/**/*.woff',
+      settings.path.theme.fonts + '/**/*.woff2'
     ],
     images: [
-      pathSettings.theme.images + '/**/*.png',
-      pathSettings.theme.images + '/**/*.jpg'
+      settings.path.theme.images + '/**/*.png',
+      settings.path.theme.images + '/**/*.jpg'
     ],
-    js: [pathSettings.theme.js + '/**/*.js'],
-    svg: [pathSettings.theme.svg + '/**/*.svg']
+    js: [settings.path.theme.js + '/**/*.js'],
+    svg: [settings.path.theme.svg + '/**/*.svg']
   },
 
   tmp: {
-    css: [pathSettings.tmp.css + '/**/*.css'],
-    sass: [pathSettings.tmp.sass + '/**/*.sass'],
-    js: [pathSettings.tmp.js + '/**/*.js'],
+    css: [settings.path.tmp.css + '/**/*.css'],
+    sass: [settings.path.tmp.sass + '/**/*.sass'],
+    js: [settings.path.tmp.js + '/**/*.js'],
     images: [
-      pathSettings.tmp.images + '/**/*.png',
-      pathSettings.tmp.images + '/**/*.jpg'
+      settings.path.tmp.images + '/**/*.png',
+      settings.path.tmp.images + '/**/*.jpg'
     ],
-    svg: [pathSettings.tmp.svg + '/**/*.svg'],
+    svg: [settings.path.tmp.svg + '/**/*.svg'],
     fonts: [
-      pathSettings.tmp.fonts + '/**/*.eot',
-      pathSettings.tmp.fonts + '/**/*.ttf',
-      pathSettings.tmp.fonts + '/**/*.woff',
-      pathSettings.tmp.fonts + '/**/*.woff2'
+      settings.path.tmp.fonts + '/**/*.eot',
+      settings.path.tmp.fonts + '/**/*.ttf',
+      settings.path.tmp.fonts + '/**/*.woff',
+      settings.path.tmp.fonts + '/**/*.woff2'
     ]
   },
 
   pattern_lab: {
-    css: [pathSettings.pattern_lab.css + '/**/*.css'],
-    sass: [pathSettings.pattern_lab.sass + '/**/*.scss'],
+    css: [settings.path.pattern_lab.css + '/**/*.css'],
+    sass: [settings.path.pattern_lab.sass + '/**/*.scss'],
     patterns: {
-      css: [pathSettings.pattern_lab.patterns + '/**/*.css'],
-      sass: [pathSettings.pattern_lab.patterns + '/**/*.scss'],
-      js: [pathSettings.pattern_lab.patterns + '/**/*.js']
+      css: [settings.path.pattern_lab.patterns + '/**/*.css'],
+      sass: [settings.path.pattern_lab.patterns + '/**/*.scss'],
+      js: [settings.path.pattern_lab.patterns + '/**/*.js']
     }
   }
 };

@@ -17,7 +17,7 @@ module.exports = function (gulp, plugins, settings, handlers) {
       console.log('css:minify:global task...');
     }
 
-    return gulp.src(settings.files.css)
+    return gulp.src(settings.files.dev.css)
       .pipe(plugins.plumber({errorHandler: handlers.error}))
       .pipe(plugins.postcss([
         autoprefixer,

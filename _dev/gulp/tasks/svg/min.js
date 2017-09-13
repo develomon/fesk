@@ -1,5 +1,7 @@
 'use strict';
 
+var del = require('del');
+
 module.exports = function (gulp, plugins, settings, handlers) {
   gulp.task('svg:min', ['svg:del'], function (cb) {
 
@@ -27,8 +29,12 @@ module.exports = function (gulp, plugins, settings, handlers) {
       ]
     };
 
-    return gulp.src(settings.files.svg)
+    return gulp.src(settings.files.dev.svg)
       .pipe(plugins.plumber({errorHandler: handlers.error}))
+      // .pipe(del([
+      //   settings.path.tmp.svg
+      // ]))
+      // .pipe(plugins.svgmin(conf))
       .pipe(plugins.svgmin(conf)).on('error', function (error) {
         console.error(error);
       })
