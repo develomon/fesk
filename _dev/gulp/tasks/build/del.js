@@ -49,4 +49,25 @@ module.exports = function (gulp, plugins, settings, handlers) {
 
     return deldir();
   });
+
+  gulp.task('build:del:templates', function (cb) {
+    if (settings.debug) {
+      console.log('build:del:templates task...');
+    }
+
+    var deldir = function (err) {
+      if (err) return cb(err);
+      del([
+        settings.path.theme.templates + '/**/*.css',
+        settings.path.theme.templates + '/**/*.gz',
+        settings.path.theme.templates + '/**/*.js',
+        settings.path.theme.templates + '/**/*.map'
+      ], {
+        force: true
+      });
+      cb();
+    };
+
+    return deldir();
+  });
 };

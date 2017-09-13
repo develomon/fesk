@@ -50,9 +50,10 @@
     "pattern-lab:css": "gulp pattern-lab:sass",
     "pattern-lab:twig": "php pattern-lab/core/console --generate",
     "server:pattern-lab": "php pattern-lab/core/console --server",
-    "cleanup": "gulp build:del",
-    "cleanup:assets": "gulp build:del",
-    "cleanup:tmp": "gulp build:del",
+    "cleanup": "npm-run-all cleanup:*",
+    "cleanup:assets": "gulp build:del:assets",
+    "cleanup:templates": "gulp build:del:templates",
+    "cleanup:tmp": "gulp build:del:tmp",
     "watch": "gulp watch"
   }
 }
