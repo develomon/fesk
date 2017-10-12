@@ -1,3 +1,12 @@
 <?php
 
 // @todo: Create toolbar link to pattern lab. '/themes/custom/fesk/_dev/pattern-lab/public/index.html'
+
+function fesk_preprocess(&$variables) {}
+
+function fesk_preprocess_html(&$variables) {}
+
+function fesk_preprocess_page(&$variables) {
+  $development = TRUE; // @todo: Create theme settings in UI.
+  $variables['#attached']['library'][] = $development ? 'fesk/development' : 'fesk/production';
+}

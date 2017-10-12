@@ -1,0 +1,20 @@
+// flex-direction:
+//   column
+//   column-reverse
+//   row
+//   row-reverse
+
+$__u-flex-prefix: '.u';
+$__u-flex-property-name: 'flex-direction';
+$__u-flex-property-values: (
+  'column',
+  'column-reverse',
+  'row',
+  'row-reverse'
+);
+
+@include generate-utility-class((
+  selector_prefix: #{$__u-flex-prefix}-#{$__u-flex-property-name},
+  property_name:   $__u-flex-property-name,
+  property_values: $__u-flex-property-values
+));

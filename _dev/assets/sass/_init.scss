@@ -1,1 +1,12 @@
+// Import config.
+@import "settings/config";
+
+// Import variables.
 @import "settings/variables/colors";
+@import "settings/variables/layout";
+
+// Import functions.
+@import "settings/functions/layout";
+
+// Import mixins.
+@import "settings/mixins/utilities";

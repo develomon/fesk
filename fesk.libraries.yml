@@ -1,12 +1,35 @@
 global:
   css:
     theme:
-      assets/css/styles.css: {}
-      assets/css/print.css: { media: print }
+      assets/stylesheets/test.css: {}
+      assets/stylesheets/styles.css: {}
+      assets/stylesheets/print.css: { media: print }
   js:
-    assets/js/scripts.js: {}
+    assets/scripts/webfontloader/webfontloader.js: {}
+    assets/scripts/scripts.js: {}
   dependencies:
     - core/jquery
+
+development:
+  css:
+    theme:
+      assets/stylesheets/dev-test.css: {}
+      assets/stylesheets/dev-styles.css: {}
+      assets/stylesheets/print.css: { media: print }
+  js:
+    assets/scripts/webfontloader/webfontloader.js: {}
+    assets/scripts/scripts.js: {}
+  dependencies:
+    - core/jquery
+
+production:
+  css:
+    theme:
+      assets/stylesheets/prod-styles.min.css: {}
+      assets/stylesheets/print.min.css: {}
+  js:
+    assets/scripts/webfontloader.js: {}
+    assets/scripts/scripts.js: {}
 
 #carousel: # [EXAMPLE]
 #  css:

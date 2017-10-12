@@ -8,6 +8,9 @@
     "last 2 versions",
     "ie 11"
   ],
+  "dependencies": {
+    "webfontloader": "^1.6.28"
+  },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
     "del": "^3.0.0",

@@ -1,0 +1,44 @@
+// Utility mixins.
+
+@mixin generate-utility-class($options: ()) {
+  $default_options: ();
+
+  $array: map-merge($default_options, $options);
+
+  $expected_options: (
+    'selector_prefix',
+    'property_name',
+    'property_values'
+  );
+
+  @each $key in $expected_options {
+    @if not map-has-key($array, $key) {
+      @error "Map has no key: `#{$key}`";
+    }
+  }
+
+  $__selector_prefix: map_get($array, 'selector_prefix');
+  $__property_name:   map_get($array, 'property_name');
+  $__property_values: map_get($array, 'property_values');
+  $__breakpoints:     $breakpoints;
+
+  @each $__property_value in $__property-values {
+    $__selector: #{$__selector_prefix}-#{$__property_value};
+    #{$__selector} {
+      #{$__property-name}: #{$__property-value};
+    }
+  }
+
+  @if ($GENERATE_RESPONSIVE_CLASSES) {
+    @each $__bp, $__mq in $__breakpoints {
+      @media #{$__mq} {
+        @each $__property_value in $__property_values {
+          $__selector: #{$__selector_prefix}-#{$__property_value}\@#{$__bp};
+          #{$__selector} {
+            #{$__property_name}: #{$__property_value};
+          }
+        }
+      }
+    }
+  }
+}

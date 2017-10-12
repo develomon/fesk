@@ -1,0 +1,17 @@
+// Breakpoint list.
+//
+// Note *
+//   The value of the key MUST be string!
+$breakpoints: (
+  s:   '(max-width:  639px)',                           // Resolutions lower than 639px.
+  m:   '(min-width:  640px) and (max-width: 1019px)',   // Resolutions bigger than 640px, and lower than 1019px.
+  l:   '(min-width: 1020px)',                           // Resolutions bigger than 1020px.
+  xl:  '(min-width: 1020px) and (max-width: 1199px)',
+  xxl: '(min-width: 1200px)'                            // Resolutions bigger than 1600px.
+);
+
+$breakpoint-s:   map-get($breakpoints, s);
+$breakpoint-m:   map-get($breakpoints, m);
+$breakpoint-l:   map-get($breakpoints, l);
+$breakpoint-xl:  map-get($breakpoints, xl);
+$breakpoint-xxl: map-get($breakpoints, xxl);

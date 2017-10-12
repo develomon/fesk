@@ -1,0 +1,18 @@
+// flex-wrap:
+//   nowrap
+//   wrap
+//   wrap-reverse
+
+$__u-flex-prefix: '.u-flex';
+$__u-flex-property-name: 'flex-wrap';
+$__u-flex-property-values: (
+  'nowrap',
+  'wrap',
+  'wrap-reverse'
+);
+
+@include generate-utility-class((
+  selector_prefix: #{$__u-flex-prefix},
+  property_name:   $__u-flex-property-name,
+  property_values: $__u-flex-property-values
+));

@@ -58,6 +58,7 @@ getTask('img', 'sprite');          // $ gulp img:sprite
 getTask('js', 'components');       // $ gulp js:components
 getTask('js', 'del');              // $ gulp js:del
 getTask('js', 'gzip');             // $ gulp js:gzip; $ gulp js:gzip:global; $ gulp js:gzip:components
+getTask('js', 'load');             // $ gulp js:load
 getTask('js', 'minify');           // $ gulp js:minify
 // Notifications
 getTask('notifications', 'build'); // $ gulp notifications:build

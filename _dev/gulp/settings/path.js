@@ -28,7 +28,8 @@ module.exports = {
     js: path.resolve(rootPath.dev, './assets/js'),
     images: path.resolve(rootPath.dev, './assets/images'),
     svg: path.resolve(rootPath.dev, './assets/svg'),
-    fonts: path.resolve(rootPath.dev, './assets/fonts')
+    fonts: path.resolve(rootPath.dev, './assets/fonts'),
+    node_modules: path.resolve(rootPath.dev, './node_modules')
   },
   theme: {
     _self: path.resolve(rootPath.theme, './'),
