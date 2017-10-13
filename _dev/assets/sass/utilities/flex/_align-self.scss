@@ -1,24 +1,12 @@
-// align-self:
-//   auto
-//   stretch
-//   baseline
-//   flex-start
-//   flex-end
-//   center
-
-$__u-flex-prefix: '.u-flex';
-$__u-flex-property-name: 'align-self';
-$__u-flex-property-values: (
-  'auto',
-  'stretch',
-  'baseline',
-  'flex-start',
-  'flex-end',
-  'center'
-);
-
 @include generate-utility-class((
-  selector_prefix: #{$__u-flex-prefix}-#{$__u-flex-property-name},
-  property_name:   $__u-flex-property-name,
-  property_values: $__u-flex-property-values
+  selector_prefix: '.u-flex-align-self',
+  property_name: 'align-self',
+  property_values: (
+    'auto',
+    'stretch',
+    'baseline',
+    'flex-start',
+    'flex-end',
+    'center'
+  )
 ));

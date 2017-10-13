@@ -1,22 +1,11 @@
-// justify-content:
-//   flex-start
-//   flex-end
-//   center
-//   space-around
-//   space-between
-
-$__u-flex-prefix: '.u-flex';
-$__u-flex-property-name: 'justify-content';
-$__u-flex-property-values: (
-  'flex-start',
-  'flex-end',
-  'center',
-  'space-around',
-  'space-between'
-);
-
 @include generate-utility-class((
-  selector_prefix: #{$__u-flex-prefix}-#{$__u-flex-property-name},
-  property_name:   $__u-flex-property-name,
-  property_values: $__u-flex-property-values
+  selector_prefix: '.u-flex-justify-content',
+  property_name: 'justify-content',
+  property_values: (
+    'flex-start',
+    'flex-end',
+    'center',
+    'space-around',
+    'space-between'
+  )
 ));

@@ -1,18 +1,9 @@
-// flex-grow:
-//   0
-//   1
-//   2
-
-$__u-flex-prefix: '.u';
-$__u-flex-property-name: 'flex-grow';
-$__u-flex-property-values: (
-  '0'
-  '1'
-  '2'
-);
-
 @include generate-utility-class((
-  selector_prefix: #{$__u-flex-prefix}-#{$__u-flex-property-name},
-  property_name:   $__u-flex-property-name,
-  property_values: $__u-flex-property-values
+  selector_prefix: '.u-flex-grow',
+  property_name: 'flex-grow',
+  property_values: (
+    '0'
+    '1'
+    '2'
+  )
 ));
