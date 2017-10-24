@@ -30,7 +30,7 @@ module.exports = function (gulp, plugins, settings, handlers) {
       .pipe(plugins.imagemin([
         plugins.imagemin.optipng({optimizationLevel: 5})
       ]))
-      .pipe(gulp.dest(settings.path.tmp.images + '/sprite'));
+      .pipe(gulp.dest(settings.path.theme.images + '/sprite'));
 
     function ret() {
       merge(imgStream, spriteData);
