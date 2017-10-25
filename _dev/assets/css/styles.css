@@ -1,3 +1,7 @@
+body {
+  font-family: "Fascinate Inline", sans-serif;
+}
+
 ul,
 ol {
   list-style: none;
@@ -735,10 +739,6 @@ ol {
   .c-container--max-width {
     max-width: 1200px;
   }
-}
-
-.c-navbar__navigation-list {
-  display: flex;
 }
 
 /*# sourceMappingURL=styles.css.map */

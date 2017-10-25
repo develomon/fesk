@@ -41,10 +41,11 @@
     "vinyl-buffer": "^1.0.0"
   },
   "scripts": {
-    "build": "npm-run-all build:svg build:css pattern-lab:css pattern-lab:twig build:notify",
+    "build": "npm-run-all build:svg build:css build:font build:js pattern-lab:css pattern-lab:twig build:notify",
     "build:css": "gulp build:css:development",
     "build:js": "gulp build:js:development",
     "build:svg": "gulp svg:sprite",
+    "build:font": "gulp font:webfontloader:recreate",
     "build:notify": "gulp notifications:build",
     "build:pattern-lab": "npm-run-all pattern-lab:css pattern-lab:twig",
     "build:production": "npm-run-all build:production:css build:production:js cleanup:tmp build:notify",

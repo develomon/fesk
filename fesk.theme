@@ -7,6 +7,6 @@ function fesk_preprocess(&$variables) {}
 function fesk_preprocess_html(&$variables) {}
 
 function fesk_preprocess_page(&$variables) {
-  $development = TRUE; // @todo: Create theme settings in UI.
-  $variables['#attached']['library'][] = $development ? 'fesk/development' : 'fesk/production';
+//  $development = TRUE; // @todo: Create theme settings in UI.
+//  $variables['#attached']['library'][] = $development ? 'fesk/development' : 'fesk/production';
 }

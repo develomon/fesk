@@ -52,6 +52,8 @@ getTask('css', 'del');             // $ gulp css:del
 getTask('css', 'global');          // $ gulp css:global
 getTask('css', 'gzip');            // $ gulp css:gzip
 getTask('css', 'minify');          // $ gulp css:minify; $ gulp css:minify:global; $ gulp css:minify:components
+// Fonts
+getTask('font', 'webfontloader');  // $ gulp font:webfontloader:copy; $ gulp font:webfontloader:del; $ gulp font:webfontloader:recreate
 // Images
 getTask('img', 'sprite');          // $ gulp img:sprite
 // JS
