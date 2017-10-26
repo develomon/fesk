@@ -9,7 +9,7 @@ module.exports = function (gulp, plugins, settings, handlers) {
       console.log('img:sprite task...');
     }
 
-    var spriteData = gulp.src(settings.path.dev.images + '/*.png')
+    var spriteData = gulp.src(settings.path.dev.images + '/*')
       .pipe(plugins.plumber({errorHandler: handlers.error}))
       .pipe(plugins.spritesmith({
         retinaSrcFilter: [settings.path.dev.images + '/*@2x.png'],
