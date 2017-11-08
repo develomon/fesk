@@ -31,7 +31,10 @@ module.exports = {
   tmp: {
     css: [settings.path.tmp.css + '/**/*.css'],
     sass: [settings.path.tmp.sass + '/**/*.sass'],
-    js: [settings.path.tmp.js + '/**/*.js'],
+    js: {
+      drupal: [settings.path.tmp.js + '/drupal/**/*.js'],
+      static: [settings.path.tmp.js + '/static/**/*.js']
+    },
     images: [
       settings.path.tmp.images + '/**/*.png',
       settings.path.tmp.images + '/**/*.jpg'
