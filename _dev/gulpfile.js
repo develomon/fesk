@@ -17,7 +17,8 @@ var settings = {
   dir: requireDir(path.resolve(__dirname, './gulp/settings')),
   files: require(path.resolve(__dirname, './gulp/settings/files.js')),
   path: require(path.resolve(__dirname, './gulp/settings/path.js')),
-  debug: true
+  debug: true,
+  cms: 'drupal'
 };
 
 /**
@@ -62,6 +63,7 @@ getTask('js', 'del');              // $ gulp js:del
 getTask('js', 'gzip');             // $ gulp js:gzip; $ gulp js:gzip:global; $ gulp js:gzip:components
 getTask('js', 'load');             // $ gulp js:load
 getTask('js', 'minify');           // $ gulp js:minify
+getTask('js', 'wrap');             // $ gulp js:wrap
 // Notifications
 getTask('notifications', 'build'); // $ gulp notifications:build
 // Pattern Lab
