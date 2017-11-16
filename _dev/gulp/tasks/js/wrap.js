@@ -1,9 +1,5 @@
 'use strict';
 
-var inject = require("gulp-inject");
-var foreach = require('gulp-foreach');
-var rename = require('gulp-rename');
-var replace = require('gulp-replace');
 var path = require('path');
 
 module.exports = function (gulp, plugins, settings, handlers) {
@@ -14,11 +10,10 @@ module.exports = function (gulp, plugins, settings, handlers) {
 
       // Drupal
       return gulp.src(settings.files.pattern_lab.patterns.js)
-        .pipe(foreach(function (stream, file) {
+        .pipe(plugins.foreach(function (stream, file) {
 
           // Take js file name.
           var fileName = path.basename(file.path, '.js').replace(/[^A-Za-z]/g, '');
-          console.log(fileName);
 
           // Take js file path.
           var filePath = file.path;
@@ -34,17 +29,17 @@ module.exports = function (gulp, plugins, settings, handlers) {
 
           // Inject js content into wrapper
           return gulp.src(wrapper)
-            .pipe(replace('fesk', fileName))
-            .pipe(inject(gulp.src(filePath), {
+            .pipe(plugins.replace('fesk', fileName))
+            .pipe(plugins.inject(gulp.src(filePath), {
               starttag: '<!-- inject:jQuery -->',
               transform: function (filePath, file) {
                 return file.contents.toString();
               }
             }))
             // Rename file.
-            .pipe(rename(function (path) {
+            .pipe(plugins.rename(function (path) {
               path.basename = pattern;
-              path.extname = ""
+              path.extname = ''
             }))
             // Save as output js file.
             .pipe(gulp.dest(settings.path.tmp.js + '/drupal'));
@@ -55,7 +50,7 @@ module.exports = function (gulp, plugins, settings, handlers) {
 
       // Static
       return gulp.src(settings.files.pattern_lab.patterns.js)
-        .pipe(foreach(function (stream, file) {
+        .pipe(plugins.foreach(function (stream, file) {
 
           // Take js file path.
           var filePath = file.path;
@@ -71,16 +66,16 @@ module.exports = function (gulp, plugins, settings, handlers) {
 
           // Inject js content into wrapper
           return gulp.src(wrapper)
-            .pipe(inject(gulp.src(filePath), {
+            .pipe(plugins.inject(gulp.src(filePath), {
               starttag: '<!-- inject:jQuery -->',
               transform: function (filePath, file) {
                 return file.contents.toString();
               }
             }))
             // Rename file.
-            .pipe(rename(function (path) {
+            .pipe(plugins.rename(function (path) {
               path.basename = pattern;
-              path.extname = ""
+              path.extname = ''
             }))
             // Save as output js file.
             .pipe(gulp.dest(settings.path.tmp.js + '/static'));
